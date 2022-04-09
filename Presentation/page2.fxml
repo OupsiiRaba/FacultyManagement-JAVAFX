@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.HBox?>
+<BorderPane fx:id="idBorderBaneProf" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="691.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestiondesprofesseurs.Presentation.ProfesseurController">
+    <left>
+        <VBox fx:id="idMenuProf" prefHeight="854.0" prefWidth="258.0" spacing="40.0" BorderPane.alignment="CENTER">
+            <children>
+
+                <Button style="-fx-background-color: gold;" fx:id="idAfficherButton" mnemonicParsing="false" onAction="#actionAfficherButton" prefHeight="52.0" prefWidth="196.0" text="Afficher" textFill="#1a1a1a">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets left="30.0" />
+                    </VBox.margin>
+                </Button>
+                <Button style="-fx-background-color: gold;" fx:id="idNouveauButton" mnemonicParsing="false" onAction="#actionNouveauButton" prefHeight="52.0" prefWidth="196.0" text="Ajouter" textFill="#1a1a1a">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets left="30.0" />
+                    </VBox.margin>
+                </Button>
+                <Button style="-fx-background-color: gold;" fx:id="idAffecterButton" mnemonicParsing="false" onAction="#actionAffecterButton" prefHeight="52.0" prefWidth="196.0" text="Affecter" textFill="#1a1a1a">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets left="30.0" />
+                    </VBox.margin>
+                </Button>
+                <Button  style="-fx-background-color: gold;" fx:id="idModifierButton" mnemonicParsing="false" onAction="#actionModifierButton" prefHeight="52.0" prefWidth="196.0" text="Modifier" textFill="#1a1a1a">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets left="30.0" />
+                    </VBox.margin>
+                </Button>
+                <Button style="-fx-background-color: gold;" fx:id="idSupprimerButton" mnemonicParsing="false" onAction="#actionSupprimerButton" prefHeight="52.0" prefWidth="196.0" text="Supprimer" textFill="#1a1a1a">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets left="30.0" />
+                    </VBox.margin>
+                </Button>
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <VBox fx:id="idContenuProf" prefHeight="939.0" prefWidth="1041.0" BorderPane.alignment="CENTER">
+            <children>
+
+                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label prefHeight="39.0" prefWidth="134.0" text="Département :" textFill="#1a1a1a">
+                            <HBox.margin>
+                                <Insets left="30.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <ChoiceBox style="-fx-background-color: gold;" fx:id="idDepartChoice" onAction="#actionAfficherProfByDeapt" prefHeight="46.0" prefWidth="251.0">
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                        </ChoiceBox>
+
+                        <TextField fx:id="idSearchMC" maxWidth="281.0" prefHeight="46.0" prefWidth="265.0">
+                            <HBox.margin>
+                                <Insets right="3.0" />
+                            </HBox.margin></TextField>
+                        <Button style="-fx-background-color: gold;" mnemonicParsing="false" onAction="#actionRecherButton" prefHeight="46.0" prefWidth="120.0" text="Chercher" textFill="#1a1a1a">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </HBox>
+                <TableView fx:id="tableViewDesProfesseurs" prefHeight="739.0" prefWidth="965.0">
+                    <columns>
+                        <TableColumn fx:id="idProfesseur" prefWidth="52.0" text="ID" />
+                        <TableColumn fx:id="nomProfesseur" prefWidth="102.0" text="Nom" />
+                        <TableColumn fx:id="prenomProf" prefWidth="101.0" text="Prénom" />
+                        <TableColumn fx:id="cinProf" prefWidth="78.0" text="Cin" />
+                        <TableColumn fx:id="adresseProf" prefWidth="226.0" text="Adresse" />
+                        <TableColumn fx:id="telephoneProf" prefWidth="153.0" text="Téléphone" />
+                        <TableColumn fx:id="emailProf" prefWidth="165.0" text="Email" />
+                        <TableColumn fx:id="dateRucProf" prefWidth="150.0" text="Date Récrutement" />
+                    </columns>
+                    <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                    </VBox.margin>
+                </TableView>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<VBox fx:id="idVboxAjout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="519.0" prefWidth="634.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestiondesprofesseurs.Presentation.ProfesseurController">
+   <children>
+      <Pane prefHeight="81.0" prefWidth="634.0">
+         <children>
+            <Text fill="#1707f6" layoutX="153.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajout d'un nouveau professeur">
+               <font>
+                  <Font name="System Bold Italic" size="23.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <HBox prefHeight="439.0" prefWidth="634.0">
+         <children>
+            <Pane prefHeight="439.0" prefWidth="637.0">
+               <children>
+                  <Label layoutX="22.0" layoutY="41.0" prefHeight="17.0" prefWidth="84.0" text="Nom:" />
+                  <Label layoutX="317.0" layoutY="41.0" prefHeight="17.0" prefWidth="55.0" text="Prénom:" />
+                  <Label layoutX="22.0" layoutY="111.0" prefHeight="17.0" prefWidth="42.0" text="CIN:" />
+                  <Label layoutX="317.0" layoutY="111.0" prefHeight="17.0" prefWidth="66.0" text="Télèphone:" />
+                  <Label layoutX="22.0" layoutY="203.0" prefHeight="17.0" prefWidth="55.0" text="Email:" />
+                  <Label layoutX="316.0" layoutY="203.0" text="Date de recrutement:" />
+                  <Label layoutX="22.0" layoutY="293.0" prefHeight="17.0" prefWidth="66.0" text="Adresse:" />
+                  <TextField fx:id="idNom" layoutX="88.0" layoutY="36.0" prefHeight="25.0" prefWidth="181.0" />
+                  <TextField fx:id="idCin" layoutX="88.0" layoutY="107.0" prefHeight="25.0" prefWidth="181.0" />
+                  <TextField fx:id="idEmail" layoutX="88.0" layoutY="199.0" prefHeight="25.0" prefWidth="181.0" />
+                  <TextField fx:id="idPrenom" layoutX="428.0" layoutY="37.0" prefHeight="25.0" prefWidth="181.0" />
+                  <TextField fx:id="idTelephone" layoutX="428.0" layoutY="107.0" prefHeight="25.0" prefWidth="181.0" />
+                  <TextField fx:id="idAdresse" layoutX="88.0" layoutY="289.0" prefHeight="25.0" prefWidth="181.0" />
+                  <DatePicker fx:id="idDateRec" layoutX="434.0" layoutY="199.0" prefHeight="25.0" prefWidth="181.0" />
+                  <Button fx:id="idEnregistrerNew" layoutX="134.0" layoutY="372.0" mnemonicParsing="false" onAction="#actionEnregistrerButtonNew" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: gold;" text="Enregistrer" />
+                  <Button fx:id="idAnnuler" layoutX="317.0" layoutY="372.0" mnemonicParsing="false" onAction="#actionAnnulerButton" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: gold;" text="Annuler" />
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </children>
+</VBox>

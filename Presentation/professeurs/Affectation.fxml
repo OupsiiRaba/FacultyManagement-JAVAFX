@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<?import javafx.scene.layout.VBox?>
+<VBox  fx:id="idContenuProf" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="541.0" prefWidth="696.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestiondesprofesseurs.Presentation.ProfesseurController">
+   <children>
+      <Pane layoutX="-4.0" prefHeight="200.0" prefWidth="677.0">
+         <children>
+            <Text fill="#0e06e4" layoutX="186.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Affectation des professeurs">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Text>
+            <Label layoutX="25.0" layoutY="83.0" prefHeight="17.0" prefWidth="88.0" text="Département:" />
+            <ChoiceBox fx:id="idDepartChoice" onAction="#actionAfficherProfByDeapt" layoutX="129.0" layoutY="79.0" prefHeight="25.0" prefWidth="167.0" style="-fx-background-color: gold;" />
+            <TextField fx:id="idSearchMC" layoutX="371.0" layoutY="79.0" prefHeight="25.0" prefWidth="167.0" />
+            <Button onAction="#actionRecherButton" layoutX="555.0" layoutY="79.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" style="-fx-background-color: gold;" text="Rehercher" />
+         </children>
+      </Pane>
+      <TableView fx:id="tableViewDesProfesseurs" onMouseClicked="#actionAffecterItem" layoutX="5.0" layoutY="155.0" prefHeight="260.0" prefWidth="684.0">
+        <columns>
+          <TableColumn fx:id="idProfesseur" prefWidth="75.0" text="ID" />
+          <TableColumn  fx:id="nomProfesseur" prefWidth="61.33330535888672" text="Nom" />
+            <TableColumn  fx:id="prenomProf"  prefWidth="79.33328247070312" text="Prénom" />
+            <TableColumn fx:id="cinProf" prefWidth="57.33338928222656" text="CIN" />
+            <TableColumn fx:id="adresseProf" prefWidth="92.6666259765625" text="Adresse" />
+            <TableColumn fx:id="telephoneProf" prefWidth="77.33331298828125" text="Télèphone" />
+            <TableColumn fx:id="emailProf" prefWidth="93.33328247070312" text="Email" />
+            <TableColumn fx:id="dateRucProf" prefWidth="160.66668701171875" text="Date de recrutement" />
+        </columns>
+      </TableView>
+      <Label layoutX="114.0" layoutY="456.0" prefHeight="17.0" prefWidth="88.0" text="Département:" />
+      <ChoiceBox fx:id="idDepartChoiceAffecte" layoutX="259.0" layoutY="452.0" prefHeight="25.0" prefWidth="223.0" style="-fx-background-color: gold;" />
+      <Button fx:id="idAffecterProfToDep" layoutX="544.0" layoutY="452.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" style="-fx-background-color: gold;" text="Affecter" />
+   </children>
+</VBox>
